@@ -1,0 +1,60 @@
+{
+  "credit": "Blizzard Entertainment artwork, served by Wowhead/ZAM.",
+  "retrieved": "2026-10-05",
+  "icons": [
+    {
+      "talentId": "0-1",
+      "name": "Arcane Drive",
+      "icon": "ability_mage_potentspirit",
+      "url": "https://wow.zamimg.com/images/wow/icons/large/ability_mage_potentspirit.jpg"
+    },
+    {
+      "talentId": "0-6",
+      "name": "Magical Precision",
+      "icon": "spell_arcane_studentofmagic",
+      "url": "https://wow.zamimg.com/images/wow/icons/large/spell_arcane_studentofmagic.jpg"
+    },
+    {
+      "talentId": "0-7",
+      "name": "Arcane Reach",
+      "icon": "spell_arcane_arcanepotency",
+      "url": "https://wow.zamimg.com/images/wow/icons/large/spell_arcane_arcanepotency.jpg"
+    },
+    {
+      "talentId": "0-10",
+      "name": "Arcane Resilience",
+      "icon": "spell_arcane_prismaticcloak",
+      "url": "https://wow.zamimg.com/images/wow/icons/large/spell_arcane_prismaticcloak.jpg"
+    },
+    {
+      "talentId": "2-2",
+      "name": "Lingering Frost",
+      "icon": "spell_frost_arcticwinds",
+      "url": "https://wow.zamimg.com/images/wow/icons/large/spell_frost_arcticwinds.jpg"
+    },
+    {
+      "talentId": "2-12",
+      "name": "Improved Ice Block",
+      "icon": "spell_frost_frozencore",
+      "url": "https://wow.zamimg.com/images/wow/icons/large/spell_frost_frozencore.jpg"
+    },
+    {
+      "talentId": "new-burn-notice",
+      "name": "Burn Notice",
+      "icon": "spell_fire_burnout",
+      "url": "https://wow.zamimg.com/images/wow/icons/large/spell_fire_burnout.jpg"
+    },
+    {
+      "talentId": "new-ice-walk",
+      "name": "Ice Walk",
+      "icon": "spell_frost_icefloes",
+      "url": "https://wow.zamimg.com/images/wow/icons/large/spell_frost_icefloes.jpg"
+    },
+    {
+      "spellId": "conjure-water",
+      "name": "Conjure Water",
+      "icon": "inv_drink_18",
+      "url": "https://wow.zamimg.com/images/wow/icons/large/inv_drink_18.jpg"
+    }
+  ]
+}

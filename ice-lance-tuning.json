@@ -1,0 +1,101 @@
+{
+  "source": "https://talentsforever.com/data.json",
+  "build": "1.60.1.70170",
+  "retrieved": "2026-10-05",
+  "sourceGenerated": "2026-10-04",
+  "earlyMultiplier": 0.25,
+  "fullMultiplier": 1.5,
+  "frozenMultiplier": 3,
+  "ranks": [
+    {
+      "rank": 1,
+      "level": 20,
+      "low": 28,
+      "high": 32,
+      "early": [
+        7,
+        8
+      ],
+      "full": [
+        42,
+        48
+      ],
+      "cost": "45 Mana | 30 yd range | Instant"
+    },
+    {
+      "rank": 2,
+      "level": 28,
+      "low": 34,
+      "high": 40,
+      "early": [
+        9,
+        10
+      ],
+      "full": [
+        51,
+        60
+      ],
+      "cost": "55 Mana | 30 yd range | Instant"
+    },
+    {
+      "rank": 3,
+      "level": 34,
+      "low": 44,
+      "high": 52,
+      "early": [
+        11,
+        13
+      ],
+      "full": [
+        66,
+        78
+      ],
+      "cost": "70 Mana | 30 yd range | Instant"
+    },
+    {
+      "rank": 4,
+      "level": 42,
+      "low": 76,
+      "high": 90,
+      "early": [
+        19,
+        23
+      ],
+      "full": [
+        114,
+        135
+      ],
+      "cost": "105 Mana | 30 yd range | Instant"
+    },
+    {
+      "rank": 5,
+      "level": 48,
+      "low": 95,
+      "high": 111,
+      "early": [
+        24,
+        28
+      ],
+      "full": [
+        143,
+        167
+      ],
+      "cost": "120 Mana | 30 yd range | Instant"
+    },
+    {
+      "rank": 6,
+      "level": 56,
+      "low": 136,
+      "high": 160,
+      "early": [
+        34,
+        40
+      ],
+      "full": [
+        204,
+        240
+      ],
+      "cost": "160 Mana | 30 yd range | Instant"
+    }
+  ]
+}

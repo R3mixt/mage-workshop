@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "baseline": "70170",
+  "mode": "proposal",
+  "level": 60,
+  "title": "Mage Class Identity — Spells & Talents",
+  "notes": "Strengthen the Mage's class identity through distinct Frost, Arcane, and Fire mechanics, with targeted buffs to improve viability without excessive increases in overall power.\n\nIce Block becomes a baseline level-25 spell with 3 sec of immunity and a 10 min cooldown. Improved Ice Block adds 7 sec, reduces the cooldown to 5 min, and heals for 30% of maximum health over the full 10 sec.\n\nIce Lance can discharge at any stack count: 0–4 stacks deal 25% of current base damage; 5 stacks deal 150%. Every cast consumes all stacks. The existing triple-damage proposal against Frozen targets is retained. Damage is initially tuned against the source's unmodified base damage, not a simulation with gear.\n\nBurn Notice adds an Ignite-style rolling damage pool for repeated applications of each Fire damage over time effect. Flame Throwing and Improved Fire Ward exchange positions, making combined range talents cost more points.\n\nArcane Resilience replaces Arcane Shielding in row 4, reducing the duration and effectiveness of debuffs by 15%/25%. Mana Shield gains the full 33% mana-drain reduction as a baseline benefit at every rank.\n\nStill open: Lingering Frost trail details; Winter's Chill stack duration and spell-power scaling; Burn Notice stack limits, tick timing and cross-Mage pooling.",
+  "patches": {
+    "2-9": {
+      "note": "The original third-row Ice Lance is removed. A redesigned Ice Lance replaces Winter's Chill in the sixth row. Improved Blizzard now occupies the original Ice Lance slot.",
+      "removed": true
+    },
+    "2-12": {
+      "name": "Improved Ice Block",
+      "cost": "",
+      "desc": [
+        "Increases the duration of your Ice Block spell by 7 sec, reduces its cooldown by 5 min, and causes it to heal you for 30% of your maximum health over its duration."
+      ],
+      "note": "Ice Block is now a baseline spell learned at level 25, granting 3 sec of immunity with a 10 min cooldown. With this talent, it lasts 10 sec, has a 5 min cooldown, and heals for 30% of maximum health over the full duration. Healing ends if Ice Block ends early.",
+      "passive": true,
+      "icon": "spell_frost_frozencore"
+    },
+    "2-2": {
+      "name": "Lingering Frost",
+      "max": 3,
+      "desc": [
+        "As you move, you leave a trail of magical frost. While on your frost trail, your movement speed is increased by 5%. This effect stacks with other movement speed increases.",
+        "As you move, you leave a trail of magical frost. While on your frost trail, your movement speed is increased by 10%. This effect stacks with other movement speed increases.",
+        "As you move, you leave a trail of magical frost. While on your frost trail, your movement speed is increased by 15%. This effect stacks with other movement speed increases."
+      ],
+      "note": "Replaces Elemental Precision. Trail duration, width, creation conditions, and persistence are to be determined. The movement speed benefit applies to the Mage who created the trail.",
+      "icon": "spell_frost_arcticwinds"
+    },
+    "2-17": {
+      "name": "Ice Lance",
+      "max": 1,
+      "cost": "160 Mana | 30 yd range | Instant",
+      "desc": [
+        "Casting a Frost spell grants 1 stack of Winter's Chill, up to a maximum of 5 stacks. Casting a non-Frost spell removes 1 stack. Ice Lance's damage is determined by the number of stacks you have before casting it. It consumes all stacks, leaving none remaining.\n\nDeals 34 to 40 Frost damage and consumes all of your Winter's Chill stacks. Can be cast with any number of stacks, including none. At 5 stacks, deals 204 to 240 Frost damage instead. Deals triple damage against Frozen targets."
+      ],
+      "note": "Damage shown for Rank 6, the highest spell rank available at level 60. Verified source: 136–160 base damage (Talents Forever, client 1.60.1.70170). Initial tuning: 25% damage at 0–4 stacks; 150% at 5 stacks. Values are rounded to whole damage. The proposal retains triple damage against Frozen targets; the beta's 300% increased damage is four times normal damage. Full-stack Frozen damage is therefore 12.5% above the beta before spell power and talents. Mana cost, range and instant cast are retained. Other spells below list all six rank damage values. Talent remains 1 rank; spell-power scaling and stack duration remain untuned.",
+      "passive": false,
+      "icon": "spell_frost_frostblast"
+    },
+    "0-1": {
+      "name": "Arcane Drive",
+      "desc": [
+        "Reduces the casting time and channel duration of your Arcane spells by 0.1 sec.",
+        "Reduces the casting time and channel duration of your Arcane spells by 0.2 sec.",
+        "Reduces the casting time and channel duration of your Arcane spells by 0.3 sec.",
+        "Reduces the casting time and channel duration of your Arcane spells by 0.4 sec.",
+        "Reduces the casting time and channel duration of your Arcane spells by 0.5 sec."
+      ],
+      "note": "Replaces Arcane Focus. Reduces the total casting time or channel duration by a fixed amount, rather than increasing spell haste by a percentage.",
+      "icon": "ability_mage_potentspirit"
+    },
+    "0-6": {
+      "name": "Magical Precision",
+      "max": 5,
+      "desc": [
+        "Increases your chance to hit with all offensive spells by 1%.",
+        "Increases your chance to hit with all offensive spells by 2%.",
+        "Increases your chance to hit with all offensive spells by 3%.",
+        "Increases your chance to hit with all offensive spells by 4%.",
+        "Increases your chance to hit with all offensive spells by 5%."
+      ],
+      "note": "Replaces Arcane Resilience. Applies to all offensive spell schools.",
+      "icon": "spell_arcane_studentofmagic"
+    },
+    "0-7": {
+      "name": "Arcane Reach",
+      "max": 3,
+      "desc": [
+        "Increases the range of all your spells by 3 yards.",
+        "Increases the range of all your spells by 6 yards.",
+        "Increases the range of all your spells by 9 yards."
+      ],
+      "note": "Replaces Arcane Geometry. Applies to all spell schools; no change to area-of-effect radius is specified.",
+      "icon": "spell_arcane_arcanepotency"
+    },
+    "1-13": {
+      "desc": [
+        "Increases the critical strike chance and critical strike damage of your Fire spells by 2%.",
+        "Increases the critical strike chance and critical strike damage of your Fire spells by 4%.",
+        "Increases the critical strike chance and critical strike damage of your Fire spells by 6%."
+      ],
+      "note": "Adds Fire spell critical strike damage to the existing critical strike chance benefit. This wording refers to critical strike damage, not only the critical strike damage bonus."
+    },
+    "1-4": {
+      "row": 4,
+      "note": "Swapped with Improved Fire Ward. Now requires 15 points in earlier Fire rows, raising the investment required to combine this talent with Arcane Reach."
+    },
+    "1-10": {
+      "row": 2,
+      "note": "Swapped with Flame Throwing. Now requires 5 points in earlier Fire rows. Effect and rank count are unchanged."
+    },
+    "new-burn-notice": {
+      "removed": false,
+      "icon": "spell_fire_burnout"
+    },
+    "1-6": {
+      "col": 4,
+      "note": "Remains in row 3 alongside Burn Notice, Improved Flamestrike and Pyroblast. Moved to column 4 so all four talents fit. Effect, rank count and point gate are unchanged."
+    },
+    "0-10": {
+      "name": "Arcane Resilience",
+      "desc": [
+        "Reduces the duration and effectiveness of debuffs on you by 15%.",
+        "Reduces the duration and effectiveness of debuffs on you by 25%."
+      ],
+      "note": "Replaces Arcane Shielding in row 4, column 1; requires 15 points in earlier Arcane rows. Magical Precision remains in the original Arcane Resilience slot. The full 33% Mana Shield mana-drain reduction is now baseline. The former Mage Armor resistance bonus is removed with Arcane Shielding; no baseline Mage Armor change is proposed. Debuffs that have no scalable numerical effect still receive the duration reduction where applicable; detailed interaction rules remain to be defined.",
+      "icon": "spell_arcane_prismaticcloak"
+    },
+    "0-12": {
+      "desc": [
+        "Allows 17% of your Mana regeneration to continue while casting. Increases the amount of mana restored by your conjured water by 10%.",
+        "Allows 33% of your Mana regeneration to continue while casting. Increases the amount of mana restored by your conjured water by 20%.",
+        "Allows 50% of your Mana regeneration to continue while casting. Increases the amount of mana restored by your conjured water by 30%."
+      ],
+      "note": "Retains the existing 17%/33%/50% mana regeneration while casting. Water created by your Conjure Water spells restores 10%/20%/30% more mana over the same drinking duration, including when consumed by allies. Applies to all Conjure Water ranks. Position, rank count and Arcane Concentration prerequisite are unchanged."
+    },
+    "2-10": {
+      "col": 3,
+      "note": "Shifted one column left, into the original Ice Lance slot. Effect, three ranks and row gate are unchanged."
+    },
+    "2-16": {
+      "max": 1,
+      "row": 3,
+      "col": 4,
+      "reqId": "2-6",
+      "desc": [
+        "When Frostbite triggers, you gain Fingers of Frost, causing your next spell to treat its target as Frozen. This effect can occur even when Frostbite’s freeze effect is toggled off. Lasts 15 sec."
+      ],
+      "note": "Moved into Improved Blizzard’s former slot in row 3, column 4. Requires 3/3 Frostbite and 10 points in earlier Frost rows. Each Frostbite proc grants one charge for your next spell, whether Frostbite’s freeze effect is enabled or disabled. A successful root is not required. The existing 15 sec buff duration is retained. Replaces the separate 15% Chill-trigger chance and the former two-rank effect."
+    },
+    "2-6": {
+      "cost": "Toggle",
+      "desc": [
+        "Gives your Chill effects a 5% chance to trigger Frostbite, freezing the target for 5 sec.\n\nYou can toggle the freeze effect off to avoid rooting targets. Frostbite continues to trigger while the freeze effect is disabled, allowing Fingers of Frost to proc normally if learned.",
+        "Gives your Chill effects a 10% chance to trigger Frostbite, freezing the target for 5 sec.\n\nYou can toggle the freeze effect off to avoid rooting targets. Frostbite continues to trigger while the freeze effect is disabled, allowing Fingers of Frost to proc normally if learned.",
+        "Gives your Chill effects a 15% chance to trigger Frostbite, freezing the target for 5 sec.\n\nYou can toggle the freeze effect off to avoid rooting targets. Frostbite continues to trigger while the freeze effect is disabled, allowing Fingers of Frost to proc normally if learned."
+      ],
+      "note": "A convenience toggle for Frostbite’s root, not an aura or a dispellable buff. Turn the freeze effect off when you do not want to root a target. The underlying 5%/10%/15% trigger chance remains active, and each proc still grants Fingers of Frost if learned. Turning the freeze effect back on restores the 5 sec root. The toggle does not change the root’s dispel rules.",
+      "passive": false
+    },
+    "new-ice-walk": {
+      "removed": false,
+      "icon": "spell_frost_icefloes"
+    }
+  },
+  "builds": {
+    "baseline": {},
+    "proposal": {}
+  },
+  "spells": [
+    {
+      "id": "ice-block",
+      "name": "Ice Block",
+      "school": "Frost",
+      "meta": "Baseline spell · Learned at level 25 · 15 Mana · Instant · 10 min cooldown",
+      "original": "You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot attack, move, or cast spells.\nOriginal access: Frost talent, earliest level 25.",
+      "proposed": "You become encased in a block of ice, protecting you from all physical attacks and spells for 3 sec. While encased, you cannot attack, move, or cast spells.",
+      "note": "Available to all Mages at level 25, matching the earliest level for the original fourth-row talent. Untalented Ice Block does not heal. Improved Ice Block extends the duration to 10 sec, reduces the cooldown to 5 min, and heals for 30% of maximum health over the full duration.",
+      "icon": "spell_frost_frost"
+    },
+    {
+      "id": "ice-lance",
+      "name": "Ice Lance",
+      "school": "Frost",
+      "meta": "Talent-granted spell · Rank 6 values · 160 Mana · 30 yd range · Instant",
+      "original": "Deals 136 to 160 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets.",
+      "proposed": "Deals 34 to 40 Frost damage and consumes all of your Winter's Chill stacks. Can be cast with any number of stacks, including none. At 5 stacks, deals 204 to 240 Frost damage instead. Deals triple damage against Frozen targets.\n\nCasting a Frost spell grants 1 stack of Winter's Chill, up to a maximum of 5 stacks. Casting a non-Frost spell removes 1 stack. Ice Lance's damage is determined by the number of stacks you have before casting it. It consumes all stacks, leaving none remaining.",
+      "note": "Design tuning, not live beta values. At maximum spell rank: Frozen-target damage is 102–120 at 0–4 stacks or 612–720 at 5 stacks, compared with the current 544–640. Full-stack base damage is 50% higher on non-Frozen targets and 12.5% higher on Frozen targets. Spell-power coefficients are not tuned. Earlier spell ranks remain listed for comparison; access to the new sixth-row talent starts at level 35.\n\nRank 1 (source level 20): current 28–32; 0–4 stacks 7–8; 5 stacks 42–48.\nRank 2 (source level 28): current 34–40; 0–4 stacks 9–10; 5 stacks 51–60.\nRank 3 (source level 34): current 44–52; 0–4 stacks 11–13; 5 stacks 66–78.\nRank 4 (source level 42): current 76–90; 0–4 stacks 19–23; 5 stacks 114–135.\nRank 5 (source level 48): current 95–111; 0–4 stacks 24–28; 5 stacks 143–167.\nRank 6 (source level 56): current 136–160; 0–4 stacks 34–40; 5 stacks 204–240.\n\nAll source ranks, costs, and levels: Talents Forever data export, client 1.60.1.70170; checked October 5, 2026. Some other databases differ by 1 damage due to scaling or rounding; this proposal consistently uses the same source as the baseline.",
+      "icon": "spell_frost_frostblast"
+    },
+    {
+      "id": "fireball",
+      "name": "Fireball",
+      "school": "Fire",
+      "meta": "Requires Burn Notice · Rank 12 shown",
+      "original": "Hurls a fiery ball that causes 425 to 541 Fire damage and an additional 60 Fire damage over 8 sec.",
+      "proposed": "Hurls a fiery ball that causes 425 to 541 Fire damage and an additional 60 Fire damage over 8 sec.\n\nWith Burn Notice, reapplying Fireball adds any remaining periodic damage to the new application and refreshes its duration. Direct damage is unchanged.",
+      "note": "Conditional talent effect: without Burn Notice, the spell is unchanged. Each caster and each spell maintains a separate rolling damage pool; different Fire effects coexist. No extra damage multiplier is added.",
+      "icon": "spell_fire_flamebolt"
+    },
+    {
+      "id": "pyroblast",
+      "name": "Pyroblast",
+      "school": "Fire",
+      "meta": "Requires Burn Notice · Rank 8 shown",
+      "original": "Hurls an immense fiery boulder that causes 520 to 646 Fire damage and an additional 212 Fire damage over 12 sec.",
+      "proposed": "Hurls an immense fiery boulder that causes 520 to 646 Fire damage and an additional 212 Fire damage over 12 sec.\n\nWith Burn Notice, reapplying Pyroblast adds any remaining periodic damage to the new application and refreshes its duration. Direct damage is unchanged.",
+      "note": "Conditional talent effect: without Burn Notice, the spell is unchanged. Each caster and each spell maintains a separate rolling damage pool; different Fire effects coexist. No extra damage multiplier is added.",
+      "icon": "spell_fire_fireball02"
+    },
+    {
+      "id": "flamestrike",
+      "name": "Flamestrike",
+      "school": "Fire",
+      "meta": "Requires Burn Notice · Rank 6 shown",
+      "original": "Calls down a pillar of fire, burning all enemies within the area for 381 to 465 Fire damage and an additional 332 Fire damage over 8 sec. Only one Flamestrike can be active per Mage at a time.",
+      "proposed": "Calls down a pillar of fire, burning all enemies within the area for 381 to 465 Fire damage and an additional 332 Fire damage over 8 sec. Only one Flamestrike can be active per Mage at a time.\n\nWith Burn Notice, reapplying Flamestrike adds any remaining periodic damage to the new application and refreshes its duration. Direct damage is unchanged.",
+      "note": "Conditional talent effect: without Burn Notice, the spell is unchanged. Each caster and each spell maintains a separate rolling damage pool; different Fire effects coexist. No extra damage multiplier is added. One active ground area per Mage is retained. How the stored periodic damage interacts with targets entering or leaving the area remains to be finalized.",
+      "icon": "spell_fire_selfdestruct"
+    },
+    {
+      "id": "ignite",
+      "name": "Ignite",
+      "school": "Fire",
+      "meta": "Requires Ignite and Burn Notice · Maximum Ignite rank shown",
+      "original": "Your critical strikes from Fire damage spells cause the target to burn for an additional 40% of your spell's damage over 4 sec.",
+      "proposed": "Your critical strikes from Fire damage spells cause the target to burn for an additional 40% of your spell's damage over 4 sec.\n\nWith Burn Notice, a new Ignite adds any remaining Ignite damage to the new application and refreshes its duration.",
+      "note": "Uses the requested Ignite-style rolling pool. Damage is tracked per caster; shared pooling across multiple Mages has not been specified. Burn Notice does not grant Ignite or increase its damage percentage. Existing beta stacking behavior is not established by the source tooltip; this entry defines the proposal explicitly.",
+      "icon": "spell_fire_incinerate"
+    },
+    {
+      "id": "mana-shield",
+      "name": "Mana Shield",
+      "school": "Arcane",
+      "meta": "Baseline spell · Rank 6 shown · 140 Mana · Instant · First learned at level 20",
+      "original": "Absorbs 570 physical damage, draining mana instead. Drains 2 mana per damage absorbed. Lasts 1 min.",
+      "proposed": "Absorbs 570 physical damage, draining mana instead. Drains 1.34 mana per point of damage absorbed. Lasts 1 min.",
+      "note": "The full 2/2 Arcane Shielding mana-drain reduction (33%) is built into all ranks: 2 × 0.67 = 1.34 mana per damage absorbed. Absorption amounts, initial mana costs, duration, physical-only coverage, and learning levels are unchanged. Displayed at rank 6, learned at level 60. The old Mage Armor resistance bonus is not included in this Mana Shield change. Source: Talents Forever, client 1.60.1.70170.",
+      "icon": "spell_shadow_detectlesserinvisibility"
+    },
+    {
+      "id": "conjure-water",
+      "name": "Conjure Water",
+      "school": "Arcane",
+      "meta": "Requires Arcane Meditation for bonus · Rank 7 shown",
+      "original": "Conjures 10 bottles of crystal water, providing the mage and his allies with something to drink.\n\nConjured items disappear if logged out for more than 15 minutes.",
+      "proposed": "Conjures 10 bottles of crystal water, providing the mage and his allies with something to drink.\n\nConjured items disappear if logged out for more than 15 minutes.\n\nWith Arcane Meditation, your conjured water restores 10%/20%/30% more mana.",
+      "note": "The bonus depends on the conjuring Mage’s Arcane Meditation rank and benefits anyone drinking that water. Applies to every Conjure Water rank. Drinking duration, quantity conjured and spell costs are unchanged. This entry describes the talent benefit; without Arcane Meditation, Conjure Water is unchanged.",
+      "icon": "inv_drink_18"
+    },
+    {
+      "id": "frostbite-toggle",
+      "name": "Frostbite",
+      "school": "Frost",
+      "meta": "Freeze effect toggle · Rank 3 shown",
+      "original": "Gives your Chill effects a 15% chance to Freeze the target for 5 sec.",
+      "proposed": "Gives your Chill effects a 15% chance to trigger Frostbite, freezing the target for 5 sec.\n\nYou can toggle the freeze effect off to avoid rooting targets. Frostbite continues to trigger while the freeze effect is disabled, allowing Fingers of Frost to proc normally if learned.",
+      "note": "A convenience toggle for Frostbite’s root, not an aura or a dispellable buff. Turn the freeze effect off when you do not want to root a target. The underlying 5%/10%/15% trigger chance remains active, and each proc still grants Fingers of Frost if learned. Turning the freeze effect back on restores the 5 sec root. The toggle does not change the root’s dispel rules.",
+      "icon": "spell_frost_frostarmor"
+    },
+    {
+      "id": "ice-walk",
+      "name": "Ice Walk",
+      "school": "Frost",
+      "meta": "Talent-granted spell · 5 sec duration · 30 sec cooldown · Mana cost to be determined",
+      "original": "New proposal spell; not present in the beta snapshot.",
+      "proposed": "Conjures a sheet of ice beneath your feet for 5 sec, allowing you to walk over water and through the air. This ice counts as Lingering Frost and grants its movement speed bonus if talented. Can be cast while falling.\n\nDoes not prevent falling damage. Landing on the ice after a long fall can be fatal.",
+      "note": "Draft utility talent: 5 sec duration and 30 sec cooldown. 1 point beside Cold Snap, in row 5, column 3. Requires 20 points in earlier Frost rows; Lingering Frost is a synergy, not a prerequisite. Ice forms beneath your feet as you move, supporting you over non-solid surfaces for the 5 sec duration, including after stepping off a ledge or casting in midair. With Lingering Frost, it grants the corresponding 5%/10%/15% movement speed increase, stacking with other movement speed increases as that talent specifies; Ice Walk adds no separate speed bonus. The ice acts as a landing surface: damage from the fall before landing is still applied and can kill you. When the effect ends over open air, you fall.\n\nStill to design: mana cost, cast time, interaction with Cold Snap, how platform height behaves on slopes or while jumping, whether allies can use the ice, and interactions with mounts and other movement effects. The platform should not reset accumulated falling distance or provide an unintended fall-damage immunity.",
+      "icon": "spell_frost_icefloes"
+    }
+  ]
+}
