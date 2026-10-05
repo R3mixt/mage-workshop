@@ -11,7 +11,7 @@ A self-contained mage talent calculator and balance proposal editor. Open `index
 
 Official instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
-Only `index.html` is required at runtime. It embeds all data, CSS, JavaScript, 66 unique icons, and three tree backgrounds. There are no CDN dependencies, analytics, or network requests during calculator use.
+Only `index.html` is required at runtime. It embeds all data, CSS, JavaScript, 67 unique icons, and three tree backgrounds. There are no CDN dependencies, analytics, or network requests during calculator use.
 
 ## Use the calculator
 
@@ -34,11 +34,13 @@ The editor changes or removes mage talents and can change active/passive types. 
 
 ## Current proposal
 
-The page opens in **My proposal**. **Current beta** retains all 54 original talents. The proposed tree has 55 visible talents: the old third-row Ice Lance is removed, and Burn Notice and Ice Walk are added.
+The page opens in **My proposal**. **Current beta** retains all 54 original talents. The proposed tree has 54 visible talents: Lingering Frost and the old third-row Ice Lance are removed, and Burn Notice and Ice Walk are added.
 
 - **Fire row 3, left to right:** Burn Notice, Improved Flamestrike, Pyroblast, Burning Soul. Burn Notice is a 1-rank passive and requires **5/5 Ignite**, shown by an arrow. Burning Soul stays on the same tier and retains its effect.
 - **Burn Notice:** Reapplying one of your Fire damage over time effects adds its remaining damage to the new application and refreshes the duration. Pools are tracked per caster and per effect. Different Fire effects remain separate. No extra damage multiplier is granted; stack limits, tick timing and cross-Mage pooling remain open tuning decisions.
 - **Flame Throwing** moves to row 4, column 2 (15 earlier Fire points required). **Improved Fire Ward** moves to row 2, column 2 (5 earlier Fire points required). Their effects and ranks are unchanged. Fully taking Flame Throwing together with 3/3 Arcane Reach now requires at least 35 talent points (17 in Fire and 18 in Arcane).
+- **Lingering Frost:** Removed. Ice Walk remains available without the frost-trail speed bonus.
+- **Frost Spines:** Replaces Frost Warding as a two-rank, self-cast active spell in row 1, column 1. Physical attacks that hit you cause **22/44 base Frost damage** to the attacker (level-60 tuning). Rank 2 is twice Forever’s current maximum-rank Thorns base damage of **22** ([source](https://wowforevertalents.com/abilities/druid/)). Direct physical melee/ranged attacks trigger it; periodic damage does not. This does not reduce incoming damage. Duration, cooldown, cost, lower-level progression, scaling and absorbed-hit interactions remain open.
 - **Ice Block** becomes a baseline Mage spell learned at **level 25**, matching the original talent's earliest availability. It provides **3 sec** of immunity, costs 15 Mana, has a 10 min cooldown, and provides no healing without the talent.
 - **Improved Ice Block:** Adds **7 sec** of immunity (10 sec total), reduces the cooldown by 5 min (5 min total), and heals for **30% of maximum health** over the full duration. Healing ends if Ice Block ends early.
 - **Ice Lance:** Remains a 1-rank talent in the former Winter's Chill slot. It can be cast with **0–5 stacks** and clears them all. Damage is based on stacks before the cast. Frost spells grant 1 stack, non-Frost spells remove 1, and Ice Lance leaves no stacks behind.
@@ -46,10 +48,10 @@ The page opens in **My proposal**. **Current beta** retains all 54 original tale
 - **Arcane Reach:** Moves to row 4, column 1 (15 earlier Arcane points required). Its three ranks still increase the range of all spells by 3/6/9 yards.
 - **Mana Shield:** All ranks gain the former full **33%** mana-drain reduction as a baseline benefit: **1.34 mana per damage absorbed**, down from 2. Absorption amounts, initial costs, duration, physical-only coverage and learning levels stay the same. Removing Arcane Shielding also removes its separate Mage Armor resistance bonus; that bonus is not rolled into baseline Mage Armor.
 - **Arcane Meditation:** Keeps its existing 17%/33%/50% mana regeneration while casting and makes your conjured water restore **10%/20%/30% more mana** over the same drinking duration. Applies to every rank of Conjure Water and benefits allies drinking water you create. Its position and prerequisite are unchanged.
-- **Ice Walk:** One-point active talent beside Cold Snap (row 5, column 3). Conjures ice under your feet for **5 sec**, with a **30 sec cooldown**, supporting movement across water and through the air, including midair casts. Counts as Lingering Frost and grants its **5%/10%/15%** speed bonus if talented. Landing on the ice preserves accumulated falling damage and can be fatal; you fall if the ice expires over open air. Mana cost, cast time, Cold Snap interaction, platform height and shared use still need design.
+- **Ice Walk:** One-point active talent beside Cold Snap (row 5, column 3). Conjures ice under your feet for **5 sec**, with a **30 sec cooldown**, supporting movement across water and through the air, including midair casts. Does not increase movement speed. Landing on the ice preserves accumulated falling damage and can be fatal; you fall if the ice expires over open air. Mana cost, cast time, Cold Snap interaction, platform height and shared use still need design.
 - **Frostbite:** Includes a convenience toggle to disable its **5 sec root** when you do not want to freeze targets. This is not an aura or a dispellable buff. Its **5%/10%/15%** trigger chance remains active with the freeze effect off, so procs still grant Fingers of Frost when learned. The root’s dispel rules are unchanged.
 - **Fingers of Frost:** One rank in row 3, column 4, connected to and requiring **3/3 Frostbite**. Frostbite procs, including while the freeze effect is toggled off, grant Fingers of Frost, causing your next spell to treat its target as Frozen. The existing 15 sec buff duration is retained. **Improved Blizzard** moves left to row 3, column 3, with its effect unchanged.
-- Previous Arcane Drive, Magical Precision, Arcane Reach, Lingering Frost and Critical Mass changes remain in place.
+- Previous Arcane Drive, Magical Precision, Arcane Reach and Critical Mass changes remain in place.
 
 ### Ice Lance source and proposed tuning
 
@@ -70,11 +72,11 @@ Initial tuning is **25%** of source base damage at 0–4 stacks and **150%** at 
 
 Below the trees, three scrollable lists organize changes by **Fire / Arcane / Frost**. Hover or focus an entry for a tooltip; click/tap to expand it. Each entry contains proposed text, beta reference text and design notes.
 
-Frost contains Ice Block, Ice Lance, the Frostbite freeze-effect toggle and Ice Walk. Fire contains conditional Burn Notice changes to Fireball, Pyroblast, Flamestrike and Ignite. Arcane contains the baseline Mana Shield efficiency change and the Arcane Meditation benefit for Conjure Water. These are proposal descriptions, not effects dynamically simulated when you spend points.
+Frost contains Frost Spines, Ice Block, Ice Lance, the Frostbite freeze-effect toggle and Ice Walk. Fire contains conditional Burn Notice changes to Fireball, Pyroblast, Flamestrike and Ignite. Arcane contains the baseline Mana Shield efficiency change and the Arcane Meditation benefit for Conjure Water. These are proposal descriptions, not effects dynamically simulated when you spend points.
 
 **Add spell change** and **Edit spell change** let you maintain this section. Spell entries are included in JSON backups, share links, Reddit summaries and downloaded HTML. Spell entries and talent descriptions are edited independently, so keep their wording consistent when revising a spell granted by a talent.
 
-**Still open:** Ice Walk cost, cast time and platform interactions; Lingering Frost trail details; Winter's Chill duration and spell-power scaling; Burn Notice tick/cap/cross-Mage details; Flamestrike stored-damage behavior when targets enter or leave its ground area. These are flagged as unfinished rather than represented as verified game rules.
+**Still open:** Ice Walk cost, cast time and platform interactions; Winter's Chill duration and spell-power scaling; Burn Notice tick/cap/cross-Mage details; Flamestrike stored-damage behavior when targets enter or leave its ground area. These are flagged as unfinished rather than represented as verified game rules.
 
 ## Save and share
 

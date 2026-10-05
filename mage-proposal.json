@@ -4,7 +4,7 @@
   "mode": "proposal",
   "level": 60,
   "title": "Mage Class Identity — Spells & Talents",
-  "notes": "Strengthen the Mage's class identity through distinct Frost, Arcane, and Fire mechanics, with targeted buffs to improve viability without excessive increases in overall power.\n\nIce Block becomes a baseline level-25 spell with 3 sec of immunity and a 10 min cooldown. Improved Ice Block adds 7 sec, reduces the cooldown to 5 min, and heals for 30% of maximum health over the full 10 sec.\n\nIce Lance can discharge at any stack count: 0–4 stacks deal 25% of current base damage; 5 stacks deal 150%. Every cast consumes all stacks. The existing triple-damage proposal against Frozen targets is retained. Damage is initially tuned against the source's unmodified base damage, not a simulation with gear.\n\nBurn Notice adds an Ignite-style rolling damage pool for repeated applications of each Fire damage over time effect. Flame Throwing and Improved Fire Ward exchange positions, making combined range talents cost more points.\n\nArcane Resilience replaces Arcane Shielding and moves to row 3, while Arcane Reach moves to row 4. Arcane Resilience reduces the duration and effectiveness of debuffs by 15%/25%. Mana Shield gains the full 33% mana-drain reduction as a baseline benefit at every rank.\n\nStill open: Lingering Frost trail details; Winter's Chill stack duration and spell-power scaling; Burn Notice stack limits, tick timing and cross-Mage pooling.",
+  "notes": "Strengthen the Mage's class identity through distinct Frost, Arcane, and Fire mechanics, with targeted buffs to improve viability without excessive increases in overall power.\n\nIce Block becomes a baseline level-25 spell with 3 sec of immunity and a 10 min cooldown. Improved Ice Block adds 7 sec, reduces the cooldown to 5 min, and heals for 30% of maximum health over the full 10 sec.\n\nIce Lance can discharge at any stack count: 0–4 stacks deal 25% of current base damage; 5 stacks deal 150%. Every cast consumes all stacks. The existing triple-damage proposal against Frozen targets is retained. Damage is initially tuned against the source's unmodified base damage, not a simulation with gear.\n\nBurn Notice adds an Ignite-style rolling damage pool for repeated applications of each Fire damage over time effect. Flame Throwing and Improved Fire Ward exchange positions, making combined range talents cost more points.\n\nArcane Resilience replaces Arcane Shielding and moves to row 3, while Arcane Reach moves to row 4. Arcane Resilience reduces the duration and effectiveness of debuffs by 15%/25%. Mana Shield gains the full 33% mana-drain reduction as a baseline benefit at every rank.\n\nStill open: Winter's Chill stack duration and spell-power scaling; Burn Notice stack limits, tick timing and cross-Mage pooling.\n\nLingering Frost is removed. Ice Walk no longer grants a movement speed bonus. Frost Spines replaces Frost Warding with active physical-hit retaliation: 22/44 base Frost damage at level 60. Its duration, cooldown, cost, lower-level progression and scaling remain open.",
   "patches": {
     "2-9": {
       "note": "The original third-row Ice Lance is removed. A redesigned Ice Lance replaces Winter's Chill in the sixth row. Improved Blizzard now occupies the original Ice Lance slot.",
@@ -22,13 +22,8 @@
     },
     "2-2": {
       "name": "Lingering Frost",
-      "max": 3,
-      "desc": [
-        "As you move, you leave a trail of magical frost. While on your frost trail, your movement speed is increased by 5%. This effect stacks with other movement speed increases.",
-        "As you move, you leave a trail of magical frost. While on your frost trail, your movement speed is increased by 10%. This effect stacks with other movement speed increases.",
-        "As you move, you leave a trail of magical frost. While on your frost trail, your movement speed is increased by 15%. This effect stacks with other movement speed increases."
-      ],
-      "note": "Replaces Elemental Precision. Trail duration, width, creation conditions, and persistence are to be determined. The movement speed benefit applies to the Mage who created the trail.",
+      "note": "Lingering Frost and its frost-trail movement speed bonus have been removed from the proposal. Ice Walk remains a separate utility talent without a movement speed bonus.",
+      "removed": true,
       "icon": "spell_frost_arcticwinds"
     },
     "2-17": {
@@ -86,6 +81,17 @@
         "Increases the critical strike chance and critical strike damage of your Fire spells by 6%."
       ],
       "note": "Adds Fire spell critical strike damage to the existing critical strike chance benefit. This wording refers to critical strike damage, not only the critical strike damage bonus."
+    },
+    "2-0": {
+      "name": "Frost Spines",
+      "cost": "Self · Duration, cooldown and mana cost to be determined",
+      "desc": [
+        "Surrounds you with razor-sharp ice, dealing 22 Frost damage to enemies that strike you with physical attacks.",
+        "Surrounds you with razor-sharp ice, dealing 44 Frost damage to enemies that strike you with physical attacks."
+      ],
+      "note": "Replaces Frost Warding with a self-cast active spell in row 1, column 1, retaining two talent ranks. Level-60 draft values are 22/44 base Frost damage per physical attack that hits you: 1x/2x the current unmodified maximum-rank Thorns damage (22), rather than Classic Era’s 18. This is flat retaliation damage and does not reduce incoming damage or reflect a percentage of it. Direct melee and ranged physical attacks trigger it; periodic damage does not. Duration, cooldown, mana cost, cast time, lower-level damage progression, spell-power scaling, absorbed-hit behavior, and interactions with other retaliation effects remain to be determined. Retaliation must not recursively trigger other retaliation effects. The former armor/resistance bonus and Frost Ward spell-reflection chance are removed. Source: https://wowforevertalents.com/abilities/druid/ and the saved Talents Forever client data, checked October 5, 2026.",
+      "passive": false,
+      "icon": "ability_mage_frostjaw"
     },
     "1-4": {
       "row": 4,
@@ -176,6 +182,16 @@
       "icon": "spell_frost_frostblast"
     },
     {
+      "id": "frost-spines",
+      "name": "Frost Spines",
+      "school": "Frost",
+      "meta": "Talent-granted spell · Rank 2 · Level-60 tuning · Duration, cooldown and mana cost TBD",
+      "original": "New active spell replacing the Frost Warding talent; not present in the beta snapshot.",
+      "proposed": "Surrounds you with razor-sharp ice, dealing 44 Frost damage to enemies that strike you with physical attacks.",
+      "note": "Replaces Frost Warding with a self-cast active spell in row 1, column 1, retaining two talent ranks. Level-60 draft values are 22/44 base Frost damage per physical attack that hits you: 1x/2x the current unmodified maximum-rank Thorns damage (22), rather than Classic Era’s 18. This is flat retaliation damage and does not reduce incoming damage or reflect a percentage of it. Direct melee and ranged physical attacks trigger it; periodic damage does not. Duration, cooldown, mana cost, cast time, lower-level damage progression, spell-power scaling, absorbed-hit behavior, and interactions with other retaliation effects remain to be determined. Retaliation must not recursively trigger other retaliation effects. The former armor/resistance bonus and Frost Ward spell-reflection chance are removed. Source: https://wowforevertalents.com/abilities/druid/ and the saved Talents Forever client data, checked October 5, 2026.",
+      "icon": "ability_mage_frostjaw"
+    },
+    {
       "id": "fireball",
       "name": "Fireball",
       "school": "Fire",
@@ -251,8 +267,8 @@
       "school": "Frost",
       "meta": "Talent-granted spell · 5 sec duration · 30 sec cooldown · Mana cost to be determined",
       "original": "New proposal spell; not present in the beta snapshot.",
-      "proposed": "Conjures a sheet of ice beneath your feet for 5 sec, allowing you to walk over water and through the air. This ice counts as Lingering Frost and grants its movement speed bonus if talented. Can be cast while falling.\n\nDoes not prevent falling damage. Landing on the ice after a long fall can be fatal.",
-      "note": "Draft utility talent: 5 sec duration and 30 sec cooldown. 1 point beside Cold Snap, in row 5, column 3. Requires 20 points in earlier Frost rows; Lingering Frost is a synergy, not a prerequisite. Ice forms beneath your feet as you move, supporting you over non-solid surfaces for the 5 sec duration, including after stepping off a ledge or casting in midair. With Lingering Frost, it grants the corresponding 5%/10%/15% movement speed increase, stacking with other movement speed increases as that talent specifies; Ice Walk adds no separate speed bonus. The ice acts as a landing surface: damage from the fall before landing is still applied and can kill you. When the effect ends over open air, you fall.\n\nStill to design: mana cost, cast time, interaction with Cold Snap, how platform height behaves on slopes or while jumping, whether allies can use the ice, and interactions with mounts and other movement effects. The platform should not reset accumulated falling distance or provide an unintended fall-damage immunity.",
+      "proposed": "Conjures a sheet of ice beneath your feet for 5 sec, allowing you to walk over water and through the air. Can be cast while falling.\n\nDoes not prevent falling damage. Landing on the ice after a long fall can be fatal.",
+      "note": "Draft utility talent: 5 sec duration and 30 sec cooldown. 1 point beside Cold Snap, in row 5, column 3. Requires 20 points in earlier Frost rows. Ice forms beneath your feet as you move, supporting you over non-solid surfaces for the 5 sec duration, including after stepping off a ledge or casting in midair. Ice Walk does not increase movement speed. The ice acts as a landing surface: damage from the fall before landing is still applied and can kill you. When the effect ends over open air, you fall.\n\nStill to design: mana cost, cast time, interaction with Cold Snap, how platform height behaves on slopes or while jumping, whether allies can use the ice, and interactions with mounts and other movement effects. The platform should not reset accumulated falling distance or provide an unintended fall-damage immunity.",
       "icon": "spell_frost_icefloes"
     }
   ]
