@@ -4,7 +4,7 @@
   "mode": "proposal",
   "level": 60,
   "title": "Mage Class Identity — Spells & Talents",
-  "notes": "Strengthen the Mage's class identity through distinct Frost, Arcane, and Fire mechanics, with targeted buffs to improve viability without excessive increases in overall power.\n\nIce Block becomes a baseline level-25 spell with 3 sec of immunity and a 10 min cooldown. Improved Ice Block adds 7 sec, reduces the cooldown to 5 min, and heals for 30% of maximum health over the full 10 sec.\n\nIce Lance can discharge at any stack count: 0–4 stacks deal 25% of current base damage; 5 stacks deal 150%. Every cast consumes all stacks. The existing triple-damage proposal against Frozen targets is retained. Damage is initially tuned against the source's unmodified base damage, not a simulation with gear.\n\nBurn Notice adds an Ignite-style rolling damage pool for repeated applications of each Fire damage over time effect. Flame Throwing and Improved Fire Ward exchange positions, making combined range talents cost more points.\n\nArcane Resilience replaces Arcane Shielding in row 4, reducing the duration and effectiveness of debuffs by 15%/25%. Mana Shield gains the full 33% mana-drain reduction as a baseline benefit at every rank.\n\nStill open: Lingering Frost trail details; Winter's Chill stack duration and spell-power scaling; Burn Notice stack limits, tick timing and cross-Mage pooling.",
+  "notes": "Strengthen the Mage's class identity through distinct Frost, Arcane, and Fire mechanics, with targeted buffs to improve viability without excessive increases in overall power.\n\nIce Block becomes a baseline level-25 spell with 3 sec of immunity and a 10 min cooldown. Improved Ice Block adds 7 sec, reduces the cooldown to 5 min, and heals for 30% of maximum health over the full 10 sec.\n\nIce Lance can discharge at any stack count: 0–4 stacks deal 25% of current base damage; 5 stacks deal 150%. Every cast consumes all stacks. The existing triple-damage proposal against Frozen targets is retained. Damage is initially tuned against the source's unmodified base damage, not a simulation with gear.\n\nBurn Notice adds an Ignite-style rolling damage pool for repeated applications of each Fire damage over time effect. Flame Throwing and Improved Fire Ward exchange positions, making combined range talents cost more points.\n\nArcane Resilience replaces Arcane Shielding and moves to row 3, while Arcane Reach moves to row 4. Arcane Resilience reduces the duration and effectiveness of debuffs by 15%/25%. Mana Shield gains the full 33% mana-drain reduction as a baseline benefit at every rank.\n\nStill open: Lingering Frost trail details; Winter's Chill stack duration and spell-power scaling; Burn Notice stack limits, tick timing and cross-Mage pooling.",
   "patches": {
     "2-9": {
       "note": "The original third-row Ice Lance is removed. A redesigned Ice Lance replaces Winter's Chill in the sixth row. Improved Blizzard now occupies the original Ice Lance slot.",
@@ -70,12 +70,13 @@
     "0-7": {
       "name": "Arcane Reach",
       "max": 3,
+      "row": 4,
       "desc": [
         "Increases the range of all your spells by 3 yards.",
         "Increases the range of all your spells by 6 yards.",
         "Increases the range of all your spells by 9 yards."
       ],
-      "note": "Replaces Arcane Geometry. Applies to all spell schools; no change to area-of-effect radius is specified.",
+      "note": "Replaces Arcane Geometry and swaps positions with Arcane Resilience: row 4, column 1, requiring 15 points in earlier Arcane rows. Applies to all spell schools; no change to area-of-effect radius is specified.",
       "icon": "spell_arcane_arcanepotency"
     },
     "1-13": {
@@ -104,11 +105,12 @@
     },
     "0-10": {
       "name": "Arcane Resilience",
+      "row": 3,
       "desc": [
         "Reduces the duration and effectiveness of debuffs on you by 15%.",
         "Reduces the duration and effectiveness of debuffs on you by 25%."
       ],
-      "note": "Replaces Arcane Shielding in row 4, column 1; requires 15 points in earlier Arcane rows. Magical Precision remains in the original Arcane Resilience slot. The full 33% Mana Shield mana-drain reduction is now baseline. The former Mage Armor resistance bonus is removed with Arcane Shielding; no baseline Mage Armor change is proposed. Debuffs that have no scalable numerical effect still receive the duration reduction where applicable; detailed interaction rules remain to be defined.",
+      "note": "Replaces Arcane Shielding and swaps positions with Arcane Reach: row 3, column 1, requiring 10 points in earlier Arcane rows. Magical Precision remains in the original Arcane Resilience slot. The full 33% Mana Shield mana-drain reduction is now baseline. The former Mage Armor resistance bonus is removed with Arcane Shielding; no baseline Mage Armor change is proposed. Debuffs that have no scalable numerical effect still receive the duration reduction where applicable; detailed interaction rules remain to be defined.",
       "icon": "spell_arcane_prismaticcloak"
     },
     "0-12": {
