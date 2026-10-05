@@ -11,7 +11,7 @@ A self-contained mage talent calculator and balance proposal editor. Open `index
 
 Official instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
-Only `index.html` is required at runtime. It embeds all data, CSS, JavaScript, 57 unique icons, and three tree backgrounds. There are no CDN dependencies, analytics, or network requests during calculator use.
+Only `index.html` is required at runtime. It embeds all data, CSS, JavaScript, 66 unique icons, and three tree backgrounds. There are no CDN dependencies, analytics, or network requests during calculator use.
 
 ## Use the calculator
 
@@ -30,11 +30,11 @@ Only `index.html` is required at runtime. It embeds all data, CSS, JavaScript, 5
 5. Turn editing off to test your proposed build. Review the before/after descriptions below the trees.
 6. Add a proposal title and overall design notes. **Copy Reddit summary** produces a Markdown explanation; it does not post anything.
 
-The editor changes or removes mage talents and can change active/passive types. This version also includes the new Burn Notice talent. The UI does not create arbitrary new talent slots, move talents between trees, simulate damage, or change the game itself. Removed talents remain in the comparison list so you can review and edit their removal. A dependent talent whose prerequisite was removed is unavailable until that prerequisite is revised.
+The editor changes or removes mage talents and can change active/passive types. This version also includes the new Burn Notice and Ice Walk talents. The UI does not create arbitrary new talent slots, move talents between trees, simulate damage, or change the game itself. Removed talents remain in the comparison list so you can review and edit their removal. A dependent talent whose prerequisite was removed is unavailable until that prerequisite is revised.
 
 ## Current proposal
 
-The page opens in **My proposal**. **Current beta** retains all 54 original talents. The proposed tree also has 54 visible talents: the old third-row Ice Lance is removed and Burn Notice is added.
+The page opens in **My proposal**. **Current beta** retains all 54 original talents. The proposed tree has 55 visible talents: the old third-row Ice Lance is removed, and Burn Notice and Ice Walk are added.
 
 - **Fire row 3, left to right:** Burn Notice, Improved Flamestrike, Pyroblast, Burning Soul. Burn Notice is a 1-rank passive and requires **5/5 Ignite**, shown by an arrow. Burning Soul stays on the same tier and retains its effect.
 - **Burn Notice:** Reapplying one of your Fire damage over time effects adds its remaining damage to the new application and refreshes the duration. Pools are tracked per caster and per effect. Different Fire effects remain separate. No extra damage multiplier is granted; stack limits, tick timing and cross-Mage pooling remain open tuning decisions.
