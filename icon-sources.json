@@ -58,8 +58,8 @@
     },
     {
       "talentId": "2-0",
-      "spellId": "frost-spines",
-      "name": "Frost Spines",
+      "spellId": "frost-ward",
+      "name": "Improved Frost Ward",
       "icon": "ability_mage_frostjaw",
       "url": "https://wow.zamimg.com/images/wow/icons/large/ability_mage_frostjaw.jpg"
     }
